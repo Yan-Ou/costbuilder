@@ -1,0 +1,13 @@
+# Ignore ssh key
+Neo4j.pem
+
+# Ignore terraform plugins directory
+.terraform/
+
+# Ignore os files
+.DS_Store
+
+# Ignore operational command
+cmdlist
+
+.idea

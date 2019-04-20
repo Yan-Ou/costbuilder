@@ -1,0 +1,82 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Serverless deployment pipeline for Batch Job Image
+Parameters:
+  BitbucketUser:
+    Type: String
+    Description: The Bitbucket user name
+  BitbucketPasswordParamStore:
+    Type: String
+    Description: Parameter store location of bitbucket password
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: Source Code Repository
+        Parameters:
+          - BitbucketUser
+          - BitbucketPassword
+          - BitbucketRepoName
+          - BitbucketRepoBranch
+Resources:
+
+  InvokeImageBuildRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: codebuild.amazonaws.com
+          Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+
+  InvokeBatchImageBuild:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Artifacts:
+        Type: NO_ARTIFACTS
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:1.0
+        Type: LINUX_CONTAINER
+        PrivilegedMode: True
+        EnvironmentVariables:
+          -
+            Name: VERSION_TAG
+            Type: PLAINTEXT
+            Value: latest
+          -
+            Name: BRANCH_NAME
+            Type: PLAINTEXT
+            Value: master
+      Tags:
+        -
+          Key: "env"
+          Value: "global"
+      Name: !Sub ${AWS::StackName}-BatchImageBuildStep
+      ServiceRole: !Ref InvokeImageBuildRole
+      Source:
+        Type: NO_SOURCE
+        BuildSpec: !Sub |
+          version: 0.1
+          env:
+            parameter-store:
+              Env_BitbucketPassword: ${BitbucketPasswordParamStore}
+          phases:
+            pre_build:
+              commands:
+                - echo Logging in to Amazon ECR...
+                - $(aws ecr get-login --no-include-email --region ap-southeast-2)
+            install:
+              commands:
+                - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
+                - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+            build:
+              commands:
+                - git clone -b $BRANCH_NAME https://${BitbucketUser}:$Env_BitbucketPassword@bitbucket.org/qriousnz/qv_costbuilder.git
+                - cd qv_costbuilder/Build_Graph && docker build -t qvcostbuilder/buildgraph .
+                - docker tag qvcostbuilder/buildgraph:latest ${AWS::AccountId}.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:$VERSION_TAG
+                - docker push ${AWS::AccountId}.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:$VERSION_TAG

@@ -1,0 +1,6 @@
+#ignore main.py.bath main.py.lambda
+main.py.batch
+main.py.lambda
+.idea
+*.xlsx
+*.pyc

@@ -1,0 +1,1769 @@
+QV Costbuilder Master
+
+See __ for outstanding issues
+
+20190117 1702 
+/Users/johngraves/Documents/20190117/qv
+/Users/johngraves/Documents/20190117/qv/20181221 1122 price lbr_hrs and lbr_cost by city saved in SQLite.py
+/Users/johngraves/Documents/20190117/qv/20190117 1040 price lbr_hrs and lbr_cost and plant_cost by city saved in SQLite.py
+/Users/johngraves/Documents/20190117/qv/20190117 1143 cost breakdown for item.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1329 aggregate up the levels by city saved in SQLite.py
+/Users/johngraves/Documents/20190117/qv/20190117 1415 cost breakdown for item.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1447 cost breakdown for item.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1451 cost breakdown for item.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1454 export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1508 Bldg price breakdown audit.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1540 A1 detail export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1540 A2 detail export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1540 B1 detail export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1540 B2 detail export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1541 Bldg export.csv
+/Users/johngraves/Documents/20190117/qv/20190117 1541 Bldg export.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1556 Bldg export.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1611 Bldg export.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1615 Bldg export.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117 1652 SQLite Bldg audit.xlsx
+/Users/johngraves/Documents/20190117/qv/20190117_1126_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1407_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1430_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1446_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1505_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1524_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1536_build_graph_from_excel.log
+/Users/johngraves/Documents/20190117/qv/20190117_1644_aggregate_by_city.log
+/Users/johngraves/Documents/20190117/qv/20190117_1647_aggregate_by_city.log
+/Users/johngraves/Documents/20190117/qv/A1 export.csv
+/Users/johngraves/Documents/20190117/qv/B1 export.csv
+/Users/johngraves/Documents/20190117/qv/Bldg export.csv
+/Users/johngraves/Documents/20190117/qv/__pycache__
+/Users/johngraves/Documents/20190117/qv/__pycache__/aggregate_up_the_levels.cpython-37.pyc
+/Users/johngraves/Documents/20190117/qv/aggregate.diff
+/Users/johngraves/Documents/20190117/qv/aggregate2.diff
+/Users/johngraves/Documents/20190117/qv/aggregate_by_city.log
+/Users/johngraves/Documents/20190117/qv/aggregate_up_the_levels.py
+/Users/johngraves/Documents/20190117/qv/audit
+/Users/johngraves/Documents/20190117/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20190117/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20190117/qv/costbuilder_inputs
+see ../qv_files.txt
+/Users/johngraves/Documents/20190117/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20190117/qv/export.csv
+/Users/johngraves/Documents/20190117/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20190117/qv/qv_costbuilder.csv
+/Users/johngraves/Documents/20190117/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20190117/qv/qv_costbuilder_from_SQLite.csv
+
+
+20190117 1504 
+match (n:Bldg) return n.id, n.total_price, n.total_material_cost, n.total_plant_cost, n.total_labour_cost
+
+20190117 0957 
+Split out aggregate_up_the_levels.py
+
+20190116 1350 
+Added two new houses and rebuilt graph:
+25608 nodes became 25610 nodes
+(qv) John-Graves-Qrious:qv johngraves$ time python build_graph_from_excel.py > build_graph_from_excel.log
+real	3m19.414s
+user	2m36.442s
+sys	0m8.395s
+
+20190116 1047 
+More data on prices from vendors for QV
+/Users/johngraves/Documents/20190116/qv
+/Users/johngraves/Documents/20190116/qv/QV Cost Builder Spreadsheet - 2019.csv
+/Users/johngraves/Documents/20190116/qv/QV Cost Builder Spreadsheet - 2019.txt
+/Users/johngraves/Documents/20190116/qv/QV Cost Builder Spreadsheet - 2019.xlsx
+/Users/johngraves/Documents/20190116/qv/QV Costbuilder 2019.xlsx
+/Users/johngraves/Documents/20190116/qv/winstone.pdf
+
+20181221 1135 
+/Users/johngraves/Documents/20181221/qv
+/Users/johngraves/Documents/20181221/qv/.DS_Store
+/Users/johngraves/Documents/20181221/qv/20181218 1623 price by city saved in SQLite.py
+/Users/johngraves/Documents/20181221/qv/20181221 1122 price lbr_hrs and lbr_cost by city saved in SQLite.py  << answers Martin's query of 11:08
+/Users/johngraves/Documents/20181221/qv/20181221 1133 qv_costbuilder.xlsx  << sent to Martin
+/Users/johngraves/Documents/20181221/qv/from_martin
+/Users/johngraves/Documents/20181221/qv/from_martin/1 House A1, breakdown.xlsx
+/Users/johngraves/Documents/20181221/qv/QV costbuilder.docx
+/Users/johngraves/Documents/20181221/qv/bitbucket link.txt
+/Users/johngraves/Documents/20181221/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181221/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181221/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181221/qv/costbuilder_inputs
+see qv_files.txt
+/Users/johngraves/Documents/20181221/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181221/qv/price_by_city.log
+/Users/johngraves/Documents/20181221/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181221/qv/qv_costbuilder.csv
+/Users/johngraves/Documents/20181221/qv/qv_costbuilder.db
+
+20181221 1039 
+__ Items without id. Manually added BC1500 and BC2500 to T43.06.007 and T43.06.013 in 8Siteworks_1.
+
+20181221 1034 
+Bitbucket link https://bitbucket.org/qriousnz/ds_qv_costbuilder/src/master/
+
+20181220 1517
+/Users/johngraves/Documents/20181220/qv
+/Users/johngraves/Documents/20181220/qv/20181220 1600 Audit QV blocks files for rate library for id.ipynb
+/Users/johngraves/Documents/20181220/qv/20181220 1622 rate library usage in blocks shows 3 uses of id Skip all_dfs.xlsx
+/Users/johngraves/Documents/20181220/qv/20181220 1658 audit rate library usage in blocks shows 3 uses of id Skip all_dfs.xlsx
+/Users/johngraves/Documents/20181220/qv/20181220 1704 Count of XGETRATE pointing to wrong or missing rate library.xlsx  <<<< problems with CostX specs (should not fool Neo4j)
+/Users/johngraves/Documents/20181220/qv/QV costbuilder.docx
+/Users/johngraves/Documents/20181220/qv/SUP_ALL as example.xlsx
+/Users/johngraves/Documents/20181220/qv/all_dfs.csv
+/Users/johngraves/Documents/20181220/qv/all_dfs.xlsx
+/Users/johngraves/Documents/20181220/qv/audit_excel_prices_and_blocks.py
+/Users/johngraves/Documents/20181220/qv/blocks_dfs.h5
+/Users/johngraves/Documents/20181220/qv/collect_excel_blocks_to_blocks_dfs.py
+see qv_files.txt
+/Users/johngraves/Documents/20181220/qv/from_alan
+/Users/johngraves/Documents/20181220/qv/from_alan/QV.xlsx
+/Users/johngraves/Documents/20181220/qv/where_ids_are.csv
+
+
+20181219 0911 
+/Users/johngraves/Documents/20181219/qv
+/Users/johngraves/Documents/20181219/qv/20181219 0921 CostX v Neo4j CH04A.xlsm
+/Users/johngraves/Documents/20181219/qv/20181219 0921 CostX v Neo4j CH04A.xlsx
+/Users/johngraves/Documents/20181219/qv/20181219 0945 T01.03.065 Showing rounding.xlsx
+/Users/johngraves/Documents/20181219/qv/20181219 1031 CostX v Neo4j CH04A.xlsm
+
+20181218 1704 
+Martin confirms there are items with no id.
+/Users/johngraves/Documents/20181218/qv
+/Users/johngraves/Documents/20181218/qv/.DS_Store
+/Users/johngraves/Documents/20181218/qv/20181218 0931 find_block_qty_and_formula_pairs.py
+/Users/johngraves/Documents/20181218/qv/20181218 1035 Unsupported features on CostX in 2Prep_1.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1112 Supported features on CostX in 2Prep_1.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1133 build_graph_from_excel.log
+/Users/johngraves/Documents/20181218/qv/20181218 1234 price by city saved in SQLite.py
+/Users/johngraves/Documents/20181218/qv/20181218 1318 CH01 with UDF.xlsm
+/Users/johngraves/Documents/20181218/qv/20181218 1443 CostX v qv_costbuilder CH03A.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1521 Neo4j missing TIPTONNE prices for T02.02.112.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1534 Neo4j NOT missing TIPTONNE prices for T02.02.112.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1553 T02.02.112 not reconciling.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1623 price by city saved in SQLite.py
+/Users/johngraves/Documents/20181218/qv/20181218 1649 CostX v qv_costbuilder CH03A.xlsx
+/Users/johngraves/Documents/20181218/qv/20181218 1701 E01.02.007_lbr_hrs.xlsx
+/Users/johngraves/Documents/20181218/qv/E01.01.013.csv
+/Users/johngraves/Documents/20181218/qv/E01.02.007_lbr_hrs.csv
+/Users/johngraves/Documents/20181218/qv/T02.02.112.csv
+/Users/johngraves/Documents/20181218/qv/aggregate_Auckland.py
+/Users/johngraves/Documents/20181218/qv/all_df_formulas.csv
+/Users/johngraves/Documents/20181218/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181218/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181218/qv/build_graph_from_excel.py
+(see ../qv_files.txt)
+/Users/johngraves/Documents/20181218/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181218/qv/from_alan
+/Users/johngraves/Documents/20181218/qv/from_alan/Price List 2018 excel.xlsx
+/Users/johngraves/Documents/20181218/qv/lbr_hrs_audit.py
+/Users/johngraves/Documents/20181218/qv/price_audit.py
+/Users/johngraves/Documents/20181218/qv/price_by_city.log
+/Users/johngraves/Documents/20181218/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181218/qv/qv_costbuilder.csv
+/Users/johngraves/Documents/20181218/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20181218/qv/qv_costbuilder.xlsx
+/Users/johngraves/Documents/20181218/qv/qv_costbuilder2.xlsx
+/Users/johngraves/Documents/20181218/qv/qv_costbuilder_with_lbr_hrs.xlsx
+
+20181218 1354 
+Worked out replacement VBA VLookup formula for CostX formula:
+Function XGETPROJECTCELL(hbk As Variant, category As Variant, version As Integer, _
+                    id As String, area As String) As Double
+    XGETPROJECTCELL = Application.WorksheetFunction.VLookup(id, Sheets("qv_costbuilder").Range("A:H"), CInt(Right(area, 1)) + 1, False)
+    '=XGETPROJECTCELL("HBK SQM 13 RES","Residential",$E479,"1 House B1","M2 Area1")
+End Function
+See /Users/johngraves/Documents/20181218/qv/20181218 1318 CH01 with UDF.xlsm
+
+20181218 1300 
+Confirmed that 10840 ids in qv_costbuilder table, .csv and .xlsx file are UNIQUE.
+
+20181218 1254 
+Aggregation across cities to SQLite works (last number is AREA7 Tauranga):
+"T05.07.081"	"588.67488372"	"577.5342568464"	"590.2423220064"	"576.07209912"	"580.1539324224"	"576.1650573504"	"380.8035"
+
+(qv) John-Graves-Qrious:qv johngraves$ in_csv 600mm | grep 95kg
+/Users/johngraves/Documents/20181211/qv/Scraped QV files/QV_COST-73.csv:"600mm dia x 6.4mm wall, 95kg/m",0.48,m,589.00,578.00,590.00,576.00,580.00,576.00
+
+20181218 1115 
+Hooray! It works!
+See /Users/johngraves/Documents/20181218/qv/20181218 1112 Supported features on CostX in 2Prep_1.xlsx
+
+20181218 1108 
+Use of MERGE meant 2 PilingCrew in 2Prep_1 item T05.07.081 became only 1. Trying to use CREATE for relationships instead.
+See /Users/johngraves/Documents/20181218/qv/20181218 1035 Unsupported features on CostX in 2Prep_1.xlsx
+
+20181218 0912 
+Continuing reconciliation work
+
+20181217 1619 
+MATCH (n) WHERE EXISTS(n.total_price) RETURN n.id, n.total_price
+yields
+/Users/johngraves/Documents/20181217/qv/20181217 1618 n with total_price Auckland export.csv
+(qv) John-Graves-Qrious:qv johngraves$ grep "House" "/Users/johngraves/Documents/20181217/qv/20181217 1618 n with total_price Auckland export.csv"
+Bldg_1_House_B1,176806.96259895802
+Bldg_1_House_B2,239448.65011554363
+
+20181217 1607 
+First building level results out of Neo4j come in 2% higher than CostX.
+
+20181217 1033 
+Made extract of prices embedded in Elemental1
+
+20181214 1702 
+_x_ Need to properly ingest /Users/johngraves/Documents/20181214/qv/from_martin/duplicated_ids mb comments.xlsx 
+[while these duplicates appear in Martin's dump of CostX, there are no duplicates in the various input pricing libraries]
+
+/Users/johngraves/Documents/20181214/qv
+/Users/johngraves/Documents/20181214/qv/.DS_Store
+/Users/johngraves/Documents/20181214/qv/20181214 0948 Spread all_df into AREA1 to AREA6.ipynb
+/Users/johngraves/Documents/20181214/qv/20181214 1028 Spread all_df into AREA1 to AREA6 without duplicates.ipynb
+/Users/johngraves/Documents/20181214/qv/20181214 1043 Raw id export.csv
+/Users/johngraves/Documents/20181214/qv/20181214 1044 completeness check.txt
+/Users/johngraves/Documents/20181214/qv/20181214 1053 missing.xlsx
+/Users/johngraves/Documents/20181214/qv/20181214 1103 Comparison of Neo4j ids with stringified all_df_spread ids.ipynb
+/Users/johngraves/Documents/20181214/qv/20181214 1113 missing_after_stringify.xlsx
+/Users/johngraves/Documents/20181214/qv/20181214 1205 build_graph_from_excel.log
+/Users/johngraves/Documents/20181214/qv/20181214 1207 errors.csv
+/Users/johngraves/Documents/20181214/qv/20181214 1207 errors.xlsx
+/Users/johngraves/Documents/20181214/qv/20181214 1245 errors.xlsx
+/Users/johngraves/Documents/20181214/qv/20181214 1255 build_graph_from_excel.log
+/Users/johngraves/Documents/20181214/qv/20181214 1312 build_graph_from_excel.log
+/Users/johngraves/Documents/20181214/qv/20181214 1312 tab related errors.xlsx
+/Users/johngraves/Documents/20181214/qv/20181214 1431 completeness check.txt
+/Users/johngraves/Documents/20181214/qv/20181214 1446 completeness checks.log
+/Users/johngraves/Documents/20181214/qv/20181214 1446 completeness checks.py
+/Users/johngraves/Documents/20181214/qv/20181214 1621 aggregate up the levels.py
+/Users/johngraves/Documents/20181214/qv/20181214 1653 Bldg requires export.csv
+/Users/johngraves/Documents/20181214/qv/all_df_spread.h5
+/Users/johngraves/Documents/20181214/qv/all_df_spread_clean.h5
+/Users/johngraves/Documents/20181214/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181214/qv/both_ids.csv
+/Users/johngraves/Documents/20181214/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181214/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs.zip
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/assigned
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/assigned/assigned.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/prices/missing.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/workbooks
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/workbooks/1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181214/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181214/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181214/qv/duplicated_ids.xlsx
+/Users/johngraves/Documents/20181214/qv/from_martin
+/Users/johngraves/Documents/20181214/qv/from_martin/duplicated_ids mb comments.xlsx
+/Users/johngraves/Documents/20181214/qv/missing.csv
+/Users/johngraves/Documents/20181214/qv/missing_after_stringify.csv
+/Users/johngraves/Documents/20181214/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181214/qv/qv_costbuilder.db
+
+
+20181214 1641 
+Trying to close the gap to get to a total calculated price on a house, it looks like there may be more embedded prices at that level as well:
+E19.22.175 is Electrical Service?
+Sent email to Martin.
+
+20181214 1237 
+__ Manually changed value in cell B984 of 6Services_1 to remove trailing whitespace
+Note how all these have TABs after the id
+ERROR: id 687663W  in file 6Services_1 is not on graph
+ERROR: id 687282  in file 6Services_1 is not on graph
+ERROR: id 686071W  in file 6Services_1 is not on graph
+ERROR: id CK2-BK  in file 6Services_1 is not on graph
+ERROR: id FRG20100N  in file 6Services_1 is not on graph
+
+20181214 1033 
+Spread the de-duped CostX rate libraries to AREAs, uncovering 71 items duplicated between AREA and NATIONAL rate libraries -- with different prices.
+
+20181213 1725 
+De-duped Martin's extract of all CostX rate libraries.
+Cleaned up CONADD0130, which he had deleted from the MAT Excel but NOT from the MAT rate library in CostX.
+
+/Users/johngraves/Documents/20181213/qv
+/Users/johngraves/Documents/20181213/qv/20181213 1131 dropped 547 prices.xlsx
+/Users/johngraves/Documents/20181213/qv/20181213 1321 DRA compared to missing ids.xlsx
+/Users/johngraves/Documents/20181213/qv/20181213 1336 CostX extracted rate libraries.xlsx
+/Users/johngraves/Documents/20181213/qv/20181213 1546 Read CostX Rate Libraries.ipynb
+/Users/johngraves/Documents/20181213/qv/20181213 1605 Read CostX Rate Libraries with Area column.ipynb
+/Users/johngraves/Documents/20181213/qv/20181213 1631 Read CostX Rate Libraries UNIQUES with Area column.ipynb
+/Users/johngraves/Documents/20181213/qv/20181213 1648 all_df_id_area_size.xlsx
+/Users/johngraves/Documents/20181213/qv/20181213 1655 all_df_id_area_size.xlsx
+/Users/johngraves/Documents/20181213/qv/CostX extracted rate libraries.xlsx
+/Users/johngraves/Documents/20181213/qv/all_df.h5
+/Users/johngraves/Documents/20181213/qv/all_df_id_area_size.csv
+/Users/johngraves/Documents/20181213/qv/all_df_id_price_size.csv
+/Users/johngraves/Documents/20181213/qv/all_df_id_rl_size.csv
+/Users/johngraves/Documents/20181213/qv/all_df_id_size.csv
+/Users/johngraves/Documents/20181213/qv/all_df_uniques_with_area.h5
+/Users/johngraves/Documents/20181213/qv/all_df_uniques_with_area_minus_CONADD0130.h5
+/Users/johngraves/Documents/20181213/qv/all_df_with_area.h5
+/Users/johngraves/Documents/20181213/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181213/qv/build_graph_from_excel.errors.csv
+/Users/johngraves/Documents/20181213/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/assigned
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/assigned/assigned.xlsx
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+.....
+/Users/johngraves/Documents/20181213/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181213/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181213/qv/from_alan
+/Users/johngraves/Documents/20181213/qv/from_alan/Prices for QV.xlsx
+/Users/johngraves/Documents/20181213/qv/from_alan/Trade Price Construction 2018.xlsx
+/Users/johngraves/Documents/20181213/qv/from_martin
+/Users/johngraves/Documents/20181213/qv/from_martin/CostX extracted rate libraries.xlsx
+/Users/johngraves/Documents/20181213/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181213/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20181213/qv/read_extracted_rate_libraries.py  << don't use, had incorrect syntax with sheet_name instead of sheetname
+
+
+20181213 1057 
+_x_ DRA links not being picked up due to type mismatch
+
+20181212 1643 
+__ Manually changed id for text labels in Elemental1 to remove duplicates of ids of E03.10.061 and E03.10.058:
+I	E03.10.001	Portal Frames—Steel	E03_Frame
+I	E03.10.002	<b>Add</b> for girts, 	E03_Frame
+I	E03.10.003	<b>Add</b> for purlins, 	E03_Frame
+
+20181212 1541 
+Way to check website values:
+grep "100mm x 50mm studs at 600mm centres" /Users/johngraves/Documents/20181211/qv/Scraped\ QV\ files/*.csv
+
+20181212 1320 
+QV_COST-78.csv has
+what LOOKS LIKE negative prices, but is actually the upper bound for T10.10.511:
+Hot Dip Galvanising.,,t,1650.00,1650.00,1650.00,1650.00,1650.00,1650.00
+"System GZ, life 10 to 20 years",,,-2070.00,-2070.00,-2070.00,-2070.00,-2070.00,-2070.00
+
+That html output is generated by CH04A code:
+T10.10.505	<b>Hot Dip Galvanising.</b>	1	t	1,653.09	1,653	1	1,653			1,650.00	1,650.00	1,650.00	1,650.00	1,650.00	1,650.00		3Structure_		-1	5.0	P
+T10.10.511	System GZ, life 10 to 20 years	1		2,066.36	2,066	1	2,066			2,070.00	2,070.00	2,070.00	2,070.00	2,070.00	2,070.00		3Structure_		-1	30.0	P
+where the -1  indicates the TYPE OF ROUNDING performed.
+
+which comes from 3Structure_1:
+I	T10.10.505	<b>Hot Dip Galvanising.</b>	T10.10_Surface Treatments	t				
+B	Galv1	Hot Dip Galvanising. System GZ, life 10 to 20 years	1	tonne	=XGETRATE("MAT",$A1,2)	1	=PRODUCT(C1*E1,F1)	=G1
+I	T10.10.511	System GZ, life 10 to 20 years	T10.10_Surface Treatments					
+B	Galv2	Hot Dip Galvanising. System GZ, life 10 to 20 years	1	tonne	=XGETRATE("MAT",$A1,2)	1	=PRODUCT(C1*E1,F1)	=G1
+
+which draws from MAT_Master rows 776-777:
+Galv1	Hot Dip Galvanising. System GZ, life 10 to 20 years	Steel Treatments	tonne	1653.09
+Galv2	Hot Dip Galvanising. System GZ, life 10 to 20 years	Steel Treatments	tonne	2066.36
+
+20181212 1104 
+__ Manually fixed D3095 in 7Finishes_1.xlsx replacing bad formula =XGETVALUE(,2) with =XGETVALUE("Discount 5%",2)
+Impacts T39.19.001
+
+20181212 1057 
+__ formula_lookups:
+=XGETVALUE("Freight Concrete Pipe",2)
+=XGETVALUE("Freight GLZ 2.5%",2)
+=XGETVALUE("Freight GLZ 2.5%",2)
+=XGETVALUE("Freight GLZ 5%",2)
+=XGETVALUE("Freight GLZ 5%",2)
+=XGETVALUE("Shop Drawings",2)
+
+20181211 1722 
+Corrected issue where graph was not linking to Raw id: 50012963 because it was NOT a string.
+Price for id: T15.01.007 then has a total_price: 19.156165875 for uom: m, whereas website has (QV_COST-83.csv from Navdeep) 17.20.
+/Users/johngraves/Documents/20181211/qv
+/Users/johngraves/Documents/20181211/qv/.DS_Store
+/Users/johngraves/Documents/20181211/qv/20181211 1626 name_id to htm file_number from names_from_htm.xlsx
+/Users/johngraves/Documents/20181211/qv/Scraped QV files
+/Users/johngraves/Documents/20181211/qv/Scraped QV files.zip
+/Users/johngraves/Documents/20181211/qv/Scraped QV files/.DS_Store
+/Users/johngraves/Documents/20181211/qv/Scraped QV files/QV_COST-10.csv
+...
+/Users/johngraves/Documents/20181211/qv/Scraped QV files/QV_COST-99.csv
+/Users/johngraves/Documents/20181211/qv/Scraping_QV.ipynb
+/Users/johngraves/Documents/20181211/qv/all_scraped_HTML_with_PNth.csv
+/Users/johngraves/Documents/20181211/qv/all_scraped_HTML_with_PNth_head.txt
+/Users/johngraves/Documents/20181211/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181211/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/assigned
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/assigned/assigned.xlsx
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/audit/E01.00.001.Elemental1.csv
+...
+/Users/johngraves/Documents/20181211/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181211/qv/csv_files_with_PNth.txt
+/Users/johngraves/Documents/20181211/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181211/qv/from_alan
+/Users/johngraves/Documents/20181211/qv/from_alan/Acero Wholesale Price List Excel.xlsx
+/Users/johngraves/Documents/20181211/qv/htm_files_with_PNth.txt
+/Users/johngraves/Documents/20181211/qv/names_from_htm.csv
+/Users/johngraves/Documents/20181211/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181211/qv/pull_names_from_htm.py
+/Users/johngraves/Documents/20181211/qv/qv_costbuilder.db
+
+20181210 1702 
+/Users/johngraves/Documents/20181210/qv
+/Users/johngraves/Documents/20181210/qv/.DS_Store
+/Users/johngraves/Documents/20181210/qv/20181210 0903 total_price export.csv
+/Users/johngraves/Documents/20181210/qv/20181210 0910 price by city saved in SQLite.py
+/Users/johngraves/Documents/20181210/qv/20181210 1115 Martin explains about column AN uplift in 5Interior_1.xlsx
+/Users/johngraves/Documents/20181210/qv/20181210 1434 concat blocks.py
+/Users/johngraves/Documents/20181210/qv/20181210 1458 Possible prices within all_blocks.csv
+/Users/johngraves/Documents/20181210/qv/20181210 1458 Possible prices within all_blocks.xlsx
+/Users/johngraves/Documents/20181210/qv/20181210 1511 Create Assign node and fixed price relationships.py
+/Users/johngraves/Documents/20181210/qv/20181210 1540 Possible prices within all_blocks.csv
+/Users/johngraves/Documents/20181210/qv/20181210 1540 Possible prices within all_blocks.xlsx
+/Users/johngraves/Documents/20181210/qv/20181210 1633 aggregate up the levels.log
+/Users/johngraves/Documents/20181210/qv/20181210 1633 aggregate up the levels.py
+/Users/johngraves/Documents/20181210/qv/Supplier List - Navdeep.xlsx
+/Users/johngraves/Documents/20181210/qv/all_blocks.csv
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/2Prep_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/3Structure_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/5Interior_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/6Services_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/Elemental1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/RES1.xlsx
+/Users/johngraves/Documents/20181210/qv/audit_of_pricing_in_column_f_formulae/sources.txt
+/Users/johngraves/Documents/20181210/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181210/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181210/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/assigned
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/assigned/assigned.xlsx  <<<<<<<< NEW
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/audit/_Elemental1_.csv
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/audit/_RES1_.csv
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/workbooks
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/workbooks/1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181210/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181210/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181210/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181210/qv/qv_costbuilder.csv
+/Users/johngraves/Documents/20181210/qv/qv_costbuilder.db
+
+
+20181210 1537 
+__ Why is E03.11.007 showing as an Item in the blocks files somewhere??
+
+20181210 1304 
+Asked Navdeep for BeautifulSoup parsing of the HTML files in /Users/johngraves/Documents/20181122/qv/QV_html/HTML
+
+20181210 1100 
+/Users/johngraves/Documents/20181210/qv
+/Users/johngraves/Documents/20181210/qv/20181210 0903 total_price export.csv
+/Users/johngraves/Documents/20181210/qv/20181210 0910 price by city saved in SQLite.py  <<< NEW Output of Neo4j calculations to .csv and SQLite
+/Users/johngraves/Documents/20181210/qv/Supplier List - Navdeep.xlsx
+/Users/johngraves/Documents/20181210/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181210/qv/qv_costbuilder.csv
+/Users/johngraves/Documents/20181210/qv/qv_costbuilder.db
+
+20181210 0858 
+_x_ Finally, need database of calculated prices.
+Current status:
+match (n:Item) WHERE EXISTS(n.total_price) return n.id, n.total_price
+// 8466
+match (n:Bldg) WHERE EXISTS(n.total_price) return n.id, n.total_price
+// 2 - but both zero
+
+20181208 1630 
+Sent another email to Martin
+/Users/johngraves/Documents/20181208/qv
+/Users/johngraves/Documents/20181208/qv/20181208 0921 aggregate up the levels.cypher
+/Users/johngraves/Documents/20181208/qv/20181208 0924 aggregate up the levels.py
+/Users/johngraves/Documents/20181208/qv/20181208 1119 Audit of tricky case.cypher
+/Users/johngraves/Documents/20181208/qv/20181208 1140 level export showing duplicate E03.10.061.xlsx
+/Users/johngraves/Documents/20181208/qv/20181208 1140 level export.csv
+/Users/johngraves/Documents/20181208/qv/20181208 1140 level export.xlsx
+/Users/johngraves/Documents/20181208/qv/20181208 1257 tricky case export.csv
+/Users/johngraves/Documents/20181208/qv/20181208 1319 302 problems in 7Finishes_1.xlsx
+/Users/johngraves/Documents/20181208/qv/20181208 1456 2129 blocks I rows with values for formula all_blocks.xlsx
+/Users/johngraves/Documents/20181208/qv/20181208 1514 Quesion on fixed value in Elemental1.xlsx
+/Users/johngraves/Documents/20181208/qv/20181208 1644 completeness checks.py
+/Users/johngraves/Documents/20181208/qv/aggregate.log
+/Users/johngraves/Documents/20181208/qv/all_blocks.csv
+/Users/johngraves/Documents/20181208/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181208/qv/concat blocks.py
+/Users/johngraves/Documents/20181208/qv/xhead_top_3_rows_of_excel.py
+
+20181208 1313 
+Damn. Sorted out how to aggregate up the levels, but then found that 7Finishes_1.xlsx doesn't work as a "block"
+on all rows -- some are hardcoded prices, so I'm not putting in the necessary nodes or :REQUIRES ...
+
+20181207 1708 
+Idea for validating Neo4j with CostX is to "line up" cells in CH01 and CH01 fixed values where there is a XGETPROJECTCELL formula.
+Struggling to aggregate prices up the levels with Navdeep.
+
+20181207 1429 
+Audit of formulae in CH02.xls (Elemental Costs of Buildings)
+/Users/johngraves/Documents/20181207/qv/20181207 1337 CH02 CURRENT Tab.xlsx
+indicates these rates come from CH01.xls (or MoE tab)
+
+
+20181206 1709 
+_x_ 1 missing input per workbook >>> turns out to relate to DUPLICATE codes for the rate of element E11.01.013 and a Discount against it
+First run including load of bldg workbooks to graph:
+['1 House B1, breakdown.xlsx', '1 House B2, breakdown.xlsx']
+ - Bldg_1_House_B1 58 items required
+ - Bldg_1_House_B2 58 items required
+Finished processing workbooks
+
+Output cum_REQUIRES_df.csv to audit relationships added
+
+real	2m48.732s
+
+/Users/johngraves/Documents/20181206/qv
+/Users/johngraves/Documents/20181206/qv/.DS_Store
+/Users/johngraves/Documents/20181206/qv/20181205 1327 Parsing of Building outputs from CostX.ipynb
+/Users/johngraves/Documents/20181206/qv/20181206 1507 QV building cost per square metre details.xlsx
+/Users/johngraves/Documents/20181206/qv/20181206 1708 1 item missing for each bldg in bldg_REQUIRES_df.xlsx
+/Users/johngraves/Documents/20181206/qv/bldg_REQUIRES_df.csv
+/Users/johngraves/Documents/20181206/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/audit
+...
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/build_price_and_block_tables_from_excel.py
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/raw
+...
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/workbooks
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/workbooks/1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181206/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181206/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181206/qv/from_martin
+/Users/johngraves/Documents/20181206/qv/from_martin/QV building cost per square metre details.xlsx
+/Users/johngraves/Documents/20181206/qv/just_workbooks_build_graph_from_excel.py
+/Users/johngraves/Documents/20181206/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181206/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/20181206 1120 Reverse Engineering CostX XGETPROJECTCELL.ipynb
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/20181206 1309 CH01 XGETPROJECTCELL formulae parameters.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/20181206 1427 CH01 XGETPROJECTCELL formulae parameters.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/20181206 1459 26 CostX workbooks agrees with CH01 formula reverse engineering.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01 - fixed values.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01 Extract with string formulae.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01 XGETPROJECTCELL formulae parameters.csv
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01 XGETPROJECTCELL formulae.csv
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01 formulae.csv
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH01.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH02.xlsx
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH03A.xls
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/CH04A.xls
+/Users/johngraves/Documents/20181206/qv/xgetprojectcell/Note_on_copied_files.txt
+
+20181206 1351 
+Examined XGETPROJECTCELL formulae in CH01.xlsx. Found one with typo?
+
+20181206 1108 
+Met with Alan. He accepts that our coming up with from-the-bottom-up figures for comparison to the published website values is reasonable.
+
+20181206 0937 
+__ Need to establish CostX target values for reconciliation of Neo4j calcluations.
+Looking at cell I140 in CH01 ... how can this formula be replaced? 1314 times XGETPROJECTCELL is used in CURRENTYEAR tab.
+
+
+20181205 1739 
+/Users/johngraves/Documents/20181205/qv
+/Users/johngraves/Documents/20181205/qv/20181205 1319 Parsing of 1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181205/qv/20181205 1327 Parsing of Building outputs from CostX.ipynb
+/Users/johngraves/Documents/20181205/qv/20181205 1511 audit of E01.02.007 export.xlsx
+/Users/johngraves/Documents/20181205/qv/20181205 1732 QV Notes.pdf
+/Users/johngraves/Documents/20181205/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/blocks
+...
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/build_price_and_block_tables_from_excel.py
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/prices
+...
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/raw
+...
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/workbooks
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/workbooks/1 House B1, breakdown.xlsx  <<< NEW
+/Users/johngraves/Documents/20181205/qv/costbuilder_inputs/workbooks/1 House B2, breakdown.xlsx  <<< NEW
+/Users/johngraves/Documents/20181205/qv/export.csv
+/Users/johngraves/Documents/20181205/qv/from_martin
+/Users/johngraves/Documents/20181205/qv/from_martin/1 House B1, breakdown.xlsx
+/Users/johngraves/Documents/20181205/qv/from_martin/1 House B2, breakdown.xlsx
+/Users/johngraves/Documents/20181205/qv/from_martin/CH01 - fixed values.xlsx
+/Users/johngraves/Documents/20181205/qv/from_martin/CH01.xlsx
+/Users/johngraves/Documents/20181205/qv/from_martin/CH02.xlsx
+/Users/johngraves/Documents/20181205/qv/from_martin/CH03A.xls
+/Users/johngraves/Documents/20181205/qv/from_martin/CH04A.xls
+/Users/johngraves/Documents/20181205/qv/from_martin/Note_on_copied_files.txt  <<<<
+/Users/johngraves/Documents/20181205/qv/price_audit.py
+/Users/johngraves/Documents/20181205/qv/price_audit2.py
+/Users/johngraves/Documents/20181205/qv/qv.cypher
+
+20181205 1548 
+Burned up 2 hours trying to reconcile 
+20181205 1511 audit of E01.02.007 export.xlsx (12.05522475)
+with
+20181205 1319 Parsing of 1 House B1, breakdown.xlsx
+E01.02.007	Site Clearance	198	m2	13.62
+
+20181203 1359
+/Users/johngraves/Documents/20181203/qv
+/Users/johngraves/Documents/20181203/qv/20181203 1144 Supplier List - Navdeep.xlsx
+/Users/johngraves/Documents/20181203/qv/QV Status.pdf
+/Users/johngraves/Documents/20181203/qv/Supplier List - Navdeep.xlsx
+/Users/johngraves/Documents/20181203/qv/all_messages.txt
+/Users/johngraves/Documents/20181203/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181203/qv/cat_message.text.files.2.txt
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/blocks
+...
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/build_price_and_block_tables_from_excel.py
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/prices
+...
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw  <<<<<<<<<<<<< NEW TODAY
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/csv
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/2017 Price File - Customer Share (14-06) (002).xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/JaydexEstimating Guide Sept 2006.xls
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/Monokote rates.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/QV Builder Spreadsheet.xlsx
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/SteelTreatment.xls
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/excel/Steel_Tube Pricebook - Rawlinsons 2011.xls
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/.DS_Store
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Quote 021 101 5858
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Quote 021 101 5858.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Quote 021 101 5858/image001.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Quote 021 101 5858/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing/image002.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing/image003.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing/image004.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Electrical pricing/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates/image001.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates/image002.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates/image003.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Rates/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image002.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image003.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image010.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image011.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image012.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image013.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image014.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image015.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/image016.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE Temporary Fencing/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes/image002.png
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes/image003.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes/image004.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes/image005.jpg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/RE aluminium SS angles bars tubes/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Traydec prices
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Traydec prices.msg
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Traydec prices/Mitre 10 Whangarei.doc
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/msg/Traydec prices/message.text
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/CRP0004_catalogue_PRICE LIST_HR.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Forman pricebook Mar2010.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/KTD quote.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Bulldozers 8.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Dump Trucks 11.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Excavators 2&3&4.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Graders 9.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Rollers 6&7.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Porterhire Price Guide Soil Compactors 7.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/SF Product Price List '17 ( General).pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Steelpipe NZ price list.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Timberbond Glulam Price list July - 2010.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/Waterproofing Estimating Guide .15.pdf
+/Users/johngraves/Documents/20181203/qv/costbuilder_inputs/raw/pdf/bungalow and villa windows.pdf
+/Users/johngraves/Documents/20181203/qv/find_prices_in_msg_text.py
+/Users/johngraves/Documents/20181203/qv/find_prices_in_xlsx.py
+/Users/johngraves/Documents/20181203/qv/found_prices.csv
+/Users/johngraves/Documents/20181203/qv/from_martin
+/Users/johngraves/Documents/20181203/qv/from_martin/1 Cost Planning Rates - Master.xlsx
+/Users/johngraves/Documents/20181203/qv/from_martin/Detailed Trade Rates - Trimmed Up.xlsx
+/Users/johngraves/Documents/20181203/qv/id_to_find.txt
+/Users/johngraves/Documents/20181203/qv/id_to_find_in_xlsx.txt
+/Users/johngraves/Documents/20181203/qv/message.text.files.2.txt
+/Users/johngraves/Documents/20181203/qv/message.text.files.txt
+/Users/johngraves/Documents/20181203/qv/msg-extractor
+...
+/Users/johngraves/Documents/20181203/qv/qv.cypher
+/Users/johngraves/Documents/20181203/qv/qv_costbuilder.db
+
+
+20181203 1025 
+Alan postpones catchup meeting.
+
+20181130 1622 
+/Users/johngraves/Documents/20181130/qv
+/Users/johngraves/Documents/20181130/qv/20181130 1016 Items with Hours uom.xlsx
+/Users/johngraves/Documents/20181130/qv/20181130 1032 Raw export of hour or Hour.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1032 Raw export of hour or Hour.xlsx
+/Users/johngraves/Documents/20181130/qv/20181130 1041 export DISTINCT REQUIRES uom.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1046 Raw export of hour or Hour.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1048 export DISTINCT REQUIRES uom.xlsx
+/Users/johngraves/Documents/20181130/qv/20181130 1052 REQUIRES day and week uom export.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1055 REQUIRES day week uom export.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1055 REQUIRES day week uom export.xlsx
+/Users/johngraves/Documents/20181130/qv/20181130 1126 hour hr hrs export.csv
+/Users/johngraves/Documents/20181130/qv/20181130 1434 build_graph_from_excel.py.zip
+/Users/johngraves/Documents/20181130/qv/Procedure Manual - QV costbuilder.docx
+/Users/johngraves/Documents/20181130/qv/Procedure Manual - QV costbuilder.pdf
+/Users/johngraves/Documents/20181130/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181130/qv/build_graph_from_excel.py  << with USE_SQL, USE THIS
+/Users/johngraves/Documents/20181130/qv/build_graph_from_excel_with_sql.log
+/Users/johngraves/Documents/20181130/qv/build_graph_from_excel_without_sql.log
+/Users/johngraves/Documents/20181130/qv/build_price_and_block_tables_from_excel.py
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/audit/E01.00.001.Elemental1.csv
+...
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/audit/_RES1_.csv
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/build_price_and_block_tables_from_excel.py << incomplete DO NOT USE
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181130/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181130/qv/cum_REQUIRES_df with 1724 missing.xlsx
+/Users/johngraves/Documents/20181130/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181130/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181130/qv/qv.cypher
+/Users/johngraves/Documents/20181130/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20181130/qv/qv_costbuilder.zip
+/Users/johngraves/Documents/20181130/qv/search_excel.py
+
+20181130 1558 
+(qv) John-Graves-Qrious:qv johngraves$ time python build_graph_from_excel.py > build_graph_from_excel_without_sql.log
+
+real	2m28.010s
+user	1m54.457s
+sys	0m7.264s
+
+20181130 1555 
+(qv) John-Graves-Qrious:qv johngraves$ time python build_graph_from_excel.py > build_graph_from_excel_with_sql.log
+
+real	2m35.281s
+user	2m1.361s
+sys	0m7.159s
+
+20181130 0921 
+Martin reveals importance of "P" column for selecting items to publish.
+
+20181129 1728 
+/Users/johngraves/Documents/20181129/qv
+/Users/johngraves/Documents/20181129/qv/20181129 1146 Look at HTML output.ipynb
+/Users/johngraves/Documents/20181129/qv/20181129 1237 Audit of 197 html_files.xlsx
+/Users/johngraves/Documents/20181129/qv/20181129 1312 Partitions.txt
+/Users/johngraves/Documents/20181129/qv/20181129 1351 Partitions hrs check.xlsx
+/Users/johngraves/Documents/20181129/qv/20181129 1648 qv_prices.xlsx  <<< Seems we have only 730 city-specific prices
+/Users/johngraves/Documents/20181129/qv/QV Plan.pdf
+/Users/johngraves/Documents/20181129/qv/audit_files.txt
+/Users/johngraves/Documents/20181129/qv/audit_files_from_20181127.txt
+/Users/johngraves/Documents/20181129/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181129/qv/build_price_and_block_tables_from_excel.py
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181129/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181129/qv/html_files.txt
+/Users/johngraves/Documents/20181129/qv/price_count_by_city_db.csv
+/Users/johngraves/Documents/20181129/qv/qv_costbuilder.db
+/Users/johngraves/Documents/20181129/qv/qv_prices.csv
+
+20181129 1508 
+Reviewed 1425 missing prices with Zahraa, see
+/Users/johngraves/Documents/20181128/qv/20181128 1219 matched.xlsx
+Also showed the prices missing in Neo4j, see 
+/Users/johngraves/Documents/20181128/qv/20181128 1057 cum_REQUIRES_df.xlsx
+__ Idea now is to build FOLDER of Vendor .csv files, process to load them to a database of prices.
+__ Also, build database of structures which DON'T require CostX to aggregrate.
+__ Finally, need database of calculated prices.
+
+20181129 1339 
+Renamed /Users/johngraves/Documents/20181122/qv/QV_html/HTML
+Found item which "looks" duplicated except for hours
+
+20181129 1104 
+Met with Prashant again on QVId to VendorId mapping.
+
+20181128 1300
+/Users/johngraves/Documents/20181128/qv
+/Users/johngraves/Documents/20181128/qv/20181128 1042 REQUIRES export 26642.csv
+/Users/johngraves/Documents/20181128/qv/20181128 1057 cum_REQUIRES_df.xlsx
+/Users/johngraves/Documents/20181128/qv/20181128 1219 matched.xlsx
+/Users/johngraves/Documents/20181128/qv/audit_inputs_for_relational_completeness.py
+/Users/johngraves/Documents/20181128/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices.zip
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181128/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181128/qv/cum_REQUIRES_df.csv
+/Users/johngraves/Documents/20181128/qv/matched.csv
+/Users/johngraves/Documents/20181128/qv/price_count_by_city.csv
+
+20181128 0857
+__ Does ORDER of /blocks loading matter?
+Confirmed that Elemental1 has XGETRATE which access:
+2Prep_1
+3Structure_1
+4Enclosure_1
+5Interior_1
+6Services_1
+7Finishes_1
+8Siteworks_1
+Elemental1
+And RES1 has GetRate formulae which access:
+LAB1
+PLT
+SUP1
+Check: Number of REQUIRES relationships should match number of "B" + id in each block input
+
+20181127 1722 
+/Users/johngraves/Documents/20181127/qv
+/Users/johngraves/Documents/20181127/qv/.DS_Store
+/Users/johngraves/Documents/20181127/qv/20181127 0948 Frequency of nan by id.xlsx
+/Users/johngraves/Documents/20181127/qv/20181127 1044 errors.txt
+/Users/johngraves/Documents/20181127/qv/20181127 1102 errors.txt
+/Users/johngraves/Documents/20181127/qv/20181127 1116 workup of factor lookup.xlsx
+/Users/johngraves/Documents/20181127/qv/20181127 1324 errors.txt
+/Users/johngraves/Documents/20181127/qv/20181127 1427 export 120748.csv
+/Users/johngraves/Documents/20181127/qv/20181127 1427 export 120748.xlsx
+/Users/johngraves/Documents/20181127/qv/20181127 1653 longest path export 48.csv
+/Users/johngraves/Documents/20181127/qv/20181127 1653 longest path export 48.xlsx
+/Users/johngraves/Documents/20181127/qv/audit_files.txt
+/Users/johngraves/Documents/20181127/qv/audit_header.csv
+/Users/johngraves/Documents/20181127/qv/build_graph_from_excel.log
+/Users/johngraves/Documents/20181127/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+...
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/T44.28.094.5Interior_1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX003.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX004.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX007.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX008.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX013.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX014.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX015.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX016.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX017.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX022.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/WEPEX030.RES1.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_2Prep_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_3Structure_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_4Enclosure_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_5Interior_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_6Services_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_7Finishes_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_8Siteworks_1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_Elemental1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/audit/_RES1_.csv
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/factor_lookup.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181127/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin
+/Users/johngraves/Documents/20181127/qv/from_martin/ELE_Master - 2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin/GEN_Master2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin/PRE_Master_2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin/ROF_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181127/qv/from_martin/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181127/qv/grep_audit_files_for_nan.sh
+/Users/johngraves/Documents/20181127/qv/killQuery.py
+/Users/johngraves/Documents/20181127/qv/listQueries.py
+/Users/johngraves/Documents/20181127/qv/nan_found.txt
+/Users/johngraves/Documents/20181127/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181127/qv/qv.cypher
+/Users/johngraves/Documents/20181127/qv/why continue on nan for costx1.png
+
+
+20181127 1707 
+I am assuming the “blocks” files with different suffixes are all alike EXCEPT for the area number of the rate library they reference. 
+__ Except for the Elemental one
+
+20181127 1416 
+No errors!!
+(qv) John-Graves-Qrious:qv johngraves$ time python build_graph_from_excel.py > build_graph_from_excel.log
+real	2m33.496s
+
+20181127 1321 
+ERROR: ValueError on id Galv2 for qty of =GetConstant("610UB125")*.001 in 3Structure_1
+*************** 629 ERRORS ***************
+
+real	2m48.422s
+user	2m0.781s
+sys	0m8.361s
+(qv) John-Graves-Qrious:qv johngraves$
+
+20181127 1307 
+Prepared extract of new batch of inputs from Martin.
+Issues: 
+__ nan in qty. See Sheet3 of /Users/johngraves/Documents/20181127/qv/20181127 0948 Frequency of nan by id.xlsx
+__ some odd formula lookup values. See rows 5/6 of /Users/johngraves/Documents/20181127/qv/costbuilder_inputs/formula_lookup.xlsx
+__ export issues (nulls). See /Users/johngraves/Documents/20181126/qv/20181126 1715 export 113109 issues.xlsx
+
+20181127 1103 
+*************** 632 ERRORS ***************
+(qv) John-Graves-Qrious:qv johngraves$
+
+20181127 1031 
+*************** 828 ERRORS ***************
+(qv) John-Graves-Qrious:qv johngraves$ python build_graph_from_excel.py
+
+20181126 1720 
+/Users/johngraves/Documents/20181126/qv
+/Users/johngraves/Documents/20181126/qv/20181123 0912 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1230 audit of T05.04.034.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1243 export without distinct.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1245 export with distinct.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1322 raw prices for T05.04.034 cities.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1435 status of inputs.txt
+/Users/johngraves/Documents/20181126/qv/20181126 1624 invalid formula.txt
+/Users/johngraves/Documents/20181126/qv/20181126 1630 export 83478 has duplicates.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1630 export 83478.csv
+/Users/johngraves/Documents/20181126/qv/20181126 1709 found mistake dupe 3 and 6 in all_ids.xlsx
+/Users/johngraves/Documents/20181126/qv/20181126 1715 export 113109.csv
+/Users/johngraves/Documents/20181126/qv/all_df.csv
+/Users/johngraves/Documents/20181126/qv/all_df_SUBTOTAL_formulas.csv
+/Users/johngraves/Documents/20181126/qv/all_df_SUBTOTAL_formulas.xlsx
+/Users/johngraves/Documents/20181126/qv/all_df_formulas.csv
+/Users/johngraves/Documents/20181126/qv/all_ids.csv
+/Users/johngraves/Documents/20181126/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181126/qv/columns_excel.py
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/audit
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/audit/DrainEquip.RES1.csv
+...
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/audit/E01.00.001.Elemental1.csv
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/audit/_RES1_.csv
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/3Structure_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/6Services_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/Elemental1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/formula_lookup.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/GEN_1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/PRE1.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181126/qv/costbuilder_inputs/qty_lookup.xlsx
+/Users/johngraves/Documents/20181126/qv/export.csv
+/Users/johngraves/Documents/20181126/qv/find_block_duplicate_ids.py
+/Users/johngraves/Documents/20181126/qv/find_block_qty_and_SUBTOTAL_formula_pairs.py
+/Users/johngraves/Documents/20181126/qv/find_block_qty_and_factor_formulas.py
+/Users/johngraves/Documents/20181126/qv/find_block_qty_and_formula_pairs.py
+/Users/johngraves/Documents/20181126/qv/formula_lookup BEFORE update.xlsx
+/Users/johngraves/Documents/20181126/qv/formula_lookup.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin
+/Users/johngraves/Documents/20181126/qv/from_martin/2017 Price File - Customer Share (14-06) (002).xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/CRP0004_catalogue_PRICE LIST_HR.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Forman pricebook Mar2010.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/JaydexEstimating Guide Sept 2006.xls
+/Users/johngraves/Documents/20181126/qv/from_martin/KTD quote.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Monokote rates.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/Nuplex Installed pricing 2016.doc
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Bulldozers 8.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Dump Trucks 11.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Excavators 2&3&4.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Graders 9.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Rollers 6&7.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Porterhire Price Guide Soil Compactors 7.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/QV Builder Spreadsheet.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/Quote 021 101 5858.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/RE Electrical pricing.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/RE Rates.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/RE Temporary Fencing.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/RE aluminium SS angles bars tubes.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/SF Product Price List '17 ( General).pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/SteelTreatment.xls
+/Users/johngraves/Documents/20181126/qv/from_martin/Steel_Tube Pricebook - Rawlinsons 2011.xls
+/Users/johngraves/Documents/20181126/qv/from_martin/Steelpipe NZ price list.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/TOWER CRANE PRICE GUIDE for Rawlinson.doc
+/Users/johngraves/Documents/20181126/qv/from_martin/Timberbond Glulam Price list July - 2010.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/Traydec prices.msg
+/Users/johngraves/Documents/20181126/qv/from_martin/Waterproofing Estimating Guide .15.pdf
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/4Enclosure_1.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/5Interior_1.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181126/qv/from_martin/blocks/wetransfer-bec108.zip
+/Users/johngraves/Documents/20181126/qv/from_martin/bungalow and villa windows.pdf
+/Users/johngraves/Documents/20181126/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181126/qv/qty_lookup.xlsx
+/Users/johngraves/Documents/20181126/qv/qv.cypher
+/Users/johngraves/Documents/20181126/qv/realign discount waste and margin.py
+/Users/johngraves/Documents/20181126/qv/search_excel.py
+
+
+20181126 1716 
+-rw-r--r--@  1 johngraves  staff   7803995 26 Nov 17:15 20181126 1715 export 113109.csv
+
+20181126 1713 
+ERROR: factor is NaN on id T42.10.025 in Elemental1
+*************** 2269 ERRORS ***************
+
+real	2m22.884s
+user	1m51.420s
+sys	0m7.718s
+(qv) John-Graves-Qrious:qv johngraves$ time python build_graph_from_excel.py
+
+20181126 1629 
+*************** 2563 ERRORS ***************
+(qv) John-Graves-Qrious:qv johngraves$ python build_graph_from_excel.py
+
+20181123 1644 
+Worked out method to apply "carry" of margin, discount and waste up to appropriate rows (in Jupyter)
+/Users/johngraves/Documents/20181123/qv
+/Users/johngraves/Documents/20181123/qv/.DS_Store
+/Users/johngraves/Documents/20181123/qv/20181122 1236 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181123/qv/20181123 0912 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181123/qv/20181123 1017 Consultation with Niel too complex 2Prep_1.xlsx
+/Users/johngraves/Documents/20181123/qv/20181123 1114 qty_formulas in 2Prep_1.xlsx
+/Users/johngraves/Documents/20181123/qv/20181123 1122 Constants needed.xlsx
+/Users/johngraves/Documents/20181123/qv/20181123 1327 Populating waste discount and margin.ipynb
+/Users/johngraves/Documents/20181123/qv/20181123 1546 Zahraa and Navdeep identify missing price sources.xlsx
+/Users/johngraves/Documents/20181123/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/blocks/.DS_Store
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/constants.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/GEN_1.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/PRE1.xlsx
+/Users/johngraves/Documents/20181123/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181123/qv/df5.csv
+/Users/johngraves/Documents/20181123/qv/excel_to_neo4j.py
+/Users/johngraves/Documents/20181123/qv/factor_lookup.csv
+/Users/johngraves/Documents/20181123/qv/formula_lookup.csv
+/Users/johngraves/Documents/20181123/qv/formula_lookup.xlsx
+/Users/johngraves/Documents/20181123/qv/from_martin
+/Users/johngraves/Documents/20181123/qv/from_martin/Constants.csv
+/Users/johngraves/Documents/20181123/qv/image006.png
+/Users/johngraves/Documents/20181123/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181123/qv/qty_formulas.csv
+/Users/johngraves/Documents/20181123/qv/qty_lookup.csv
+/Users/johngraves/Documents/20181123/qv/qty_lookup.xlsx
+/Users/johngraves/Documents/20181123/qv/realign discount waste and margin.py
+/Users/johngraves/Documents/20181123/qv/xhead_top_3_rows_of_excel.py
+
+20181122 1720 
+/Users/johngraves/Documents/20181122/qv
+/Users/johngraves/Documents/20181122/qv/.DS_Store
+/Users/johngraves/Documents/20181122/qv/20181122 1120 QV Plan.pdf
+/Users/johngraves/Documents/20181122/qv/20181122 1236 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181122/qv/20181122 1316 node_count_by_label.xlsx
+/Users/johngraves/Documents/20181122/qv/20181122 1717 convoluted RES1.xlsx
+/Users/johngraves/Documents/20181122/qv/Duplicate id.txt
+/Users/johngraves/Documents/20181122/qv/GetConstant examples.txt
+/Users/johngraves/Documents/20181122/qv/QV Martin Bisset hours on costbuilder update.pdf
+/Users/johngraves/Documents/20181122/qv/QV html
+/Users/johngraves/Documents/20181122/qv/QV html/.DS_Store
+/Users/johngraves/Documents/20181122/qv/QV html/HTML
+/Users/johngraves/Documents/20181122/qv/QV html/HTML.zip
+/Users/johngraves/Documents/20181122/qv/QV html/HTML/QV_COST-1.htm
+...
+/Users/johngraves/Documents/20181122/qv/QV html/HTML/QV_COST-99.htm
+/Users/johngraves/Documents/20181122/qv/QV html/HTML/QV_COST.htm
+/Users/johngraves/Documents/20181122/qv/audit_excel_first_sheet_first_3_rows.py
+/Users/johngraves/Documents/20181122/qv/audit_excel_prices_and_blocks.py
+/Users/johngraves/Documents/20181122/qv/audit_excel_prices_and_blocks.txt
+/Users/johngraves/Documents/20181122/qv/blocks_from_excel_to_neo4j.py
+/Users/johngraves/Documents/20181122/qv/build_graph_from_excel.py
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/.DS_Store
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/blocks
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/blocks/RES1.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/factors.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/.DS_Store
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/DRA.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/GEN_1.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/GLU.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/LAB_ALL.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/PLT.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/PLU.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/PRE1.xlsx
+/Users/johngraves/Documents/20181122/qv/costbuilder_inputs/prices/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181122/qv/count_by_label.py
+/Users/johngraves/Documents/20181122/qv/excel_to_neo4j.py
+/Users/johngraves/Documents/20181122/qv/export.csv
+/Users/johngraves/Documents/20181122/qv/factors_from_martin
+/Users/johngraves/Documents/20181122/qv/factors_from_martin/factors.csv
+/Users/johngraves/Documents/20181122/qv/mat_and_sup_to_neo4j.py
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/.DS_Store
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/DRA.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/DRA.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/GEN_1.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/GEN_1.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/GLU.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/GLU.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/LAB1.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/LAB1.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/MAT_Master 2018Q3.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PLT.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PLT.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PLU.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PLU.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PRE1.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/PRE1.xlsx
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/SUP_ALL.csv
+/Users/johngraves/Documents/20181122/qv/mat_sup_lab_res/SUP_ALL.xlsx
+/Users/johngraves/Documents/20181122/qv/node_count_by_label.csv
+/Users/johngraves/Documents/20181122/qv/numbered_blocks
+/Users/johngraves/Documents/20181122/qv/numbered_blocks/.DS_Store
+/Users/johngraves/Documents/20181122/qv/numbered_blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181122/qv/numbered_blocks/RES1.xlsx
+/Users/johngraves/Documents/20181122/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181122/qv/tabula-2017.09 VELUX NZ Brochure&Price List.xlsx
+
+
+20181121
+/Users/johngraves/Documents/20181121/qv
+/Users/johngraves/Documents/20181121/qv/.DS_Store
+/Users/johngraves/Documents/20181121/qv/20181121 0937 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181121/qv/20181121 1634 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181121/qv/QV Costbuilder Master for search.txt
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/LAB3.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/LAB4.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/LAB5.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/LAB6.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/RES3.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/RES4.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/RES5.csv
+/Users/johngraves/Documents/20181121/qv/additional_rate_libraries_3_on/RES6.csv
+/Users/johngraves/Documents/20181121/qv/blocks_to_neo4j.py
+/Users/johngraves/Documents/20181121/qv/build_bill_of_materials2.py
+/Users/johngraves/Documents/20181121/qv/count_by_city.py
+/Users/johngraves/Documents/20181121/qv/export.csv
+/Users/johngraves/Documents/20181121/qv/export.xlsx
+/Users/johngraves/Documents/20181121/qv/find_Auckland.py
+/Users/johngraves/Documents/20181121/qv/grep_in_cyp_code.py
+/Users/johngraves/Documents/20181121/qv/grep_in_python_code.py
+/Users/johngraves/Documents/20181121/qv/mat_and_sup
+/Users/johngraves/Documents/20181121/qv/mat_and_sup/MAT_Master 2018Q3.csv
+/Users/johngraves/Documents/20181121/qv/mat_and_sup/SUP_ALL.csv
+/Users/johngraves/Documents/20181121/qv/mat_and_sup_to_neo4j.py
+/Users/johngraves/Documents/20181121/qv/numbered_blocks
+/Users/johngraves/Documents/20181121/qv/numbered_blocks/2Prep_1.csv
+/Users/johngraves/Documents/20181121/qv/numbered_blocks/2Prep_1.xlsx
+/Users/johngraves/Documents/20181121/qv/price_count_by_city.csv
+/Users/johngraves/Documents/20181121/qv/qv match.cypher
+/Users/johngraves/Documents/20181121/qv/temp.py
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/.DS_Store
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/blocks2.csv
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/prices.csv
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/qv.cypher
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/to_neo4j_with_relationships.py
+/Users/johngraves/Documents/20181121/qv/top.py
+
+20181121 1431 
+Successful load of MAT and SUP with prices for all cities into Neo4j in under 30 seconds.
+
+20181121 1140 
+Achieved proof of Neo4j calculation of price of timber piles for Auckland, see combination of
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/blocks2.csv
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/prices.csv
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/qv.cypher
+/Users/johngraves/Documents/20181121/qv/timber_pile_inputs/to_neo4j_with_relationships.py
+
+20181121 0907 
+Still looking to recreate CostX calculation of Auckland Timber Pile in Neo4j.
+
+20181120 1354 
+Looking to recreate CostX calculation of Auckland Timber Pile in Neo4j.
+
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/blocks.csv
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/blocks2.csv
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/blocks_and_prices_to_calculated_price.cyp
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/prices.csv
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/py2neo_demo.py
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/reference.cyp
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/run_cyp.py
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/to_neo4j.py
+/Users/johngraves/Documents/20181120/qv/timber_pile_inputs/to_neo4j_with_relationships.py
+
+
+/Users/johngraves/Documents/20181120/qv
+/Users/johngraves/Documents/20181120/qv/20181119 1427 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181120/qv/20181119 1510 Scan QV spreadsheets for XGETRATE.ipynb
+/Users/johngraves/Documents/20181120/qv/20181119 1644 Missing Rate Libraries.xlsx
+/Users/johngraves/Documents/20181120/qv/20181120 1211 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181120/qv/20181120 1236 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181120/qv/20181120 1326 Scape QV costbuilder site.ipynb
+/Users/johngraves/Documents/20181120/qv/20181120 1401 From blocks and prices to calculated price in Neo4j.ipynb
+/Users/johngraves/Documents/20181120/qv/QV costbuilder00.html
+/Users/johngraves/Documents/20181120/qv/QV costbuilder00_files
+/Users/johngraves/Documents/20181120/qv/QV costbuilder00_files/AccountCtrl.js
+...
+/Users/johngraves/Documents/20181120/qv/QV costbuilder00_files/validateUserLimit.js
+/Users/johngraves/Documents/20181120/qv/QV costbuilder01.html
+/Users/johngraves/Documents/20181120/qv/QV costbuilder01_files
+/Users/johngraves/Documents/20181120/qv/QV costbuilder01_files/AccountCtrl.js
+...
+/Users/johngraves/Documents/20181120/qv/QV costbuilder01_files/validateUserLimit.js
+/Users/johngraves/Documents/20181120/qv/QV costbuilder02.html
+/Users/johngraves/Documents/20181120/qv/QV costbuilder02_files
+/Users/johngraves/Documents/20181120/qv/QV costbuilder02_files/AccountCtrl.js
+...
+/Users/johngraves/Documents/20181120/qv/QV costbuilder02_files/validateUserLimit.js
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/DRA.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/GEN_1.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/GLU.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/GLZ_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/HDW_Master2018Q1.xlsx
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/LAB1.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/LAB2.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/PLT.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/PLU.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/PRE1.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/RES1.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/RES2.csv
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/SPEC MASTER 2018Q1.xlsx
+/Users/johngraves/Documents/20181120/qv/additional_rate_libraries/SUP_2.csv
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/Makefile
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/README.md
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/build
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/build/.gitkeep
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/hello-world.ipynb
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/index.ipynb
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/lib
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/lib/vis
+...
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/lib/vis/examples/timeline/styling/itemTemplates.html
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/panama.ipynb
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/requirements.txt
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/scripts
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/scripts/__init__.py
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/scripts/twitter.py
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/scripts/vis.py
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/twitter.ipynb
+/Users/johngraves/Documents/20181120/qv/neo4j-jupyter/workshop.ipynb
+/Users/johngraves/Documents/20181120/qv/qv20181120.zip
+
+20181120 1137 
+RES2, LAB2, SUB2 ?? Still a different set of rate libraries? <-- These would be for Wellington (area 2).
+
+20181120 0918 
+Additional rate libraries arrive. First stand up.
+
+20181119 1658 
+/Users/johngraves/Documents/20181119/qv
+/Users/johngraves/Documents/20181119/qv/20181119 1115 QV Plan.pdf
+/Users/johngraves/Documents/20181119/qv/20181119 1223 Missing values in MAT_Master_2018Q3_Extract.xlsx
+/Users/johngraves/Documents/20181119/qv/20181119 1427 Reconstruction of CostX calculation for 3600mm long Timber Pile.xlsx
+/Users/johngraves/Documents/20181119/qv/20181119 1644 Missing Rate Libraries.xlsx
+/Users/johngraves/Documents/20181119/qv/2Prep_1 XGETRATE.txt
+/Users/johngraves/Documents/20181119/qv/2Prep_1 XGETRATE_filtered.txt
+/Users/johngraves/Documents/20181119/qv/2Prep_1 XGETRATE_filtered.xlsx
+/Users/johngraves/Documents/20181119/qv/2Prep_1.xlsx
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE.txt
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE_filtered.txt
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE_filtered.xlsx
+/Users/johngraves/Documents/20181119/qv/5Interior_1.xlsx
+/Users/johngraves/Documents/20181119/qv/6Services_1.xlsx
+/Users/johngraves/Documents/20181119/qv/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181119/qv/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE.txt
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE_filtered.txt
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE_filtered.xlsx
+/Users/johngraves/Documents/20181119/qv/MAT_Master_2018Q3_Extract.csv
+/Users/johngraves/Documents/20181119/qv/QV Martin Bisset hours on costbuilder update.pdf
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/20181119 1510 Scan QV spreadsheets for XGETRATE.ipynb
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/20181119 1541 Process QV spreadsheets dependencies for XGETRATE.ipynb
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/20181119 1646 Scan QV spreadsheets for XGETRATE Counts.ipynb
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/2Prep_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/3Structure_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/5Interior_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/6Services_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/8Siteworks_1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/Elemental1.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/SUP_MASTER_2018_M8.xlsm
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/dependencies.cyp
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/file_dict.pickle
+/Users/johngraves/Documents/20181119/qv/collected_costx_inputs/xgetrate_targets.pickle
+/Users/johngraves/Documents/20181119/qv/qv.cypher.py
+/Users/johngraves/Documents/20181119/qv/qv20181119.zip
+/Users/johngraves/Documents/20181119/qv/run_cyp.py
+
+20181119 1308 
+Received 5 additional files
+/Users/johngraves/Documents/20181119/qv
+/Users/johngraves/Documents/20181119/qv/2Prep_1.xlsx
+/Users/johngraves/Documents/20181119/qv/5Interior_1.xlsx
+/Users/johngraves/Documents/20181119/qv/6Services_1.xlsx
+/Users/johngraves/Documents/20181119/qv/7Finishes_1.xlsx
+/Users/johngraves/Documents/20181119/qv/8Siteworks_1.xlsx
+
+/Users/johngraves/Documents/20181119/qv
+/Users/johngraves/Documents/20181119/qv/20181119 1115 QV Plan.pdf
+/Users/johngraves/Documents/20181119/qv/20181119 1223 Missing values in MAT_Master_2018Q3_Extract.xlsx
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE.txt
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE_filtered.txt
+/Users/johngraves/Documents/20181119/qv/3Struct XGETRATE_filtered.xlsx
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE.txt
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE_filtered.txt
+/Users/johngraves/Documents/20181119/qv/Elementa1 XGETRATE_filtered.xlsx
+/Users/johngraves/Documents/20181119/qv/MAT_Master_2018Q3_Extract.csv
+/Users/johngraves/Documents/20181119/qv/qv.cypher.py
+
+20181119 1058 
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c
+5 files do not include:
+2Prep_1
+4Enclosure_1
+5Interior_1
+7Finishes_1
+8Siteworks_1
+
+20181119 0957 
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/SUP_MASTER_2018_M8.xlsm
+Uses an INDIRECT() formula to shift area-specific columns into Column E for area-specific pricing for loading into CostX.
+Additional tabs hold vendor data.
+
+20181119 0942 
+MAT Materials columns G and H have annotations (see row 304).
+Column A and "SKI" Column I do not always match.
+
+20181119 0928 
+Row 249 of MAT Material tab has prices and PRIOR prices of item B450 which is a copy of data from row 8 of the Bunnings tab
+which includes the case and Doors for a kitchen base unit, where the prices are AVERAGES of the door colours. 
+The Assembled price is ignored. Column K "col Num" indicates which column of the vendor sheet is to be copied.
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/MAT_Master 2018Q3.xlsx
+
+20181119 0908 
+Attempt to reverse engineer CostX INPUTS to become Neo4j inputs.
+
+match (n)
+WHERE NOT (EXISTS (n.name)) with n match (n)-[r]-() delete r, n;
+
+20181116 1111 
+/Users/johngraves/Documents/20181116/qv
+/Users/johngraves/Documents/20181116/qv/20181116 1002 QV Plan.pdf
+/Users/johngraves/Documents/20181116/qv/20181116 1437 First successful bill of materials query.xlsx
+
+20181115 1654 
+/Users/johngraves/Documents/20181115/Screenshots/Screen Shot 2018-11-15 at 3.52.56 PM Neo4j two networks.png
+
+20181115 1111
+/Users/johngraves/Documents/20181115/qv
+/Users/johngraves/Documents/20181115/qv
+/Users/johngraves/Documents/20181115/qv/20181106 1216 QV Presentation notes (Martin).pdf
+/Users/johngraves/Documents/20181115/qv/20181115 1058 QV Plan.pdf
+/Users/johngraves/Documents/20181115/qv/9781783983988_code
+/Users/johngraves/Documents/20181115/qv/9781783983988_code.zip
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/.project
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/.pydevproject
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/CreateNode.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/CreateRelationship.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/CreateSocialNetworkData.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/ExecuteCypher.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/ExecuteUnitTests.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/ExploreBatch.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/ExplorePaths.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/__pycache__
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/__pycache__/CreateSocialNetworkData.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/TestSocialNetworkData.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__init__.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__pycache__
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__pycache__/MyFirstTest.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__pycache__/SocialNetworkData.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__pycache__/TestSocialNetworkData.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_04_code/CH-4-Py2neo/src/test/__pycache__/__init__.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/.DS_Store
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/.project
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/.pydevproject
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/FlaskRestfulService.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/FlaskWebApp.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/__pycache__
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/__pycache__/ExecuteCRUDOperations.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/SocialDataModel.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__init__.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/ExecuteCRUDOperations.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/ExecuteSearchOperations.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/Movie.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/Person.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/SocialDataModel.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/model/__pycache__/__init__.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/operations
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/operations/ExecuteCRUDOperations.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/operations/ExecuteSearchOperations.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/operations/__init__.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/operations/__pycache__/__init__.cpython-34.pyc
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/service
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/service/MutateSocialNetworkDataService.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/service/__init__.py
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/static
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/static/staticHTMLFile.html
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/templates
+/Users/johngraves/Documents/20181115/qv/9781783983988_code/B0454_05_code/CH-5-Flask-OGM/src/templates/dynamicTemplate.html
+/Users/johngraves/Documents/20181115/qv/HelloWorldExample.py
+/Users/johngraves/Documents/20181115/qv/import   <<<<<<<<<<<<< Run web server here
+/Users/johngraves/Documents/20181115/qv/import/movies.csv
+/Users/johngraves/Documents/20181115/qv/import/persons.csv
+/Users/johngraves/Documents/20181115/qv/import/roles.csv
+/Users/johngraves/Documents/20181115/qv/movies.csv
+/Users/johngraves/Documents/20181115/qv/neo4j-developer-manual-3.4-python.pdf
+/Users/johngraves/Documents/20181115/qv/neo4j_getting_started.py  <<<<<< This Python code worked in qv virtual environment
+
+
+20181114 1051 
+/Users/johngraves/Documents/20181114/qv
+/Users/johngraves/Documents/20181114/qv/2017 Price File - Customer Share (14-06) (002).xlsx
+/Users/johngraves/Documents/20181114/qv/2017.09 VELUX NZ Brochure&Price List.pdf
+/Users/johngraves/Documents/20181114/qv/Adlux Price List 2018.pdf
+/Users/johngraves/Documents/20181114/qv/BHQ_2017_Pricelist.pdf
+/Users/johngraves/Documents/20181114/qv/Boltholder - Martin Bisset Quote 23373.pdf
+/Users/johngraves/Documents/20181114/qv/Ceiling Panel Price Indication - August 2017.pdf
+/Users/johngraves/Documents/20181114/qv/Copy of JH PRICING-EXOTEC Latest.xlsx
+/Users/johngraves/Documents/20181114/qv/D3.1-Civilboss-Twin-Wall-Polypropylene-Pipe.pdf
+/Users/johngraves/Documents/20181114/qv/Dominator QV Door Info.xlsx
+/Users/johngraves/Documents/20181114/qv/FW Flushing Step urinals.msg
+/Users/johngraves/Documents/20181114/qv/First Flex Quote #13308.msg
+/Users/johngraves/Documents/20181114/qv/Formatube 01.04.17.pdf
+/Users/johngraves/Documents/20181114/qv/Formavoid 01.04.17.pdf
+/Users/johngraves/Documents/20181114/qv/Franke QV Builder Spreadsheet.xlsx
+/Users/johngraves/Documents/20181114/qv/Glass Shape Rates.pdf
+/Users/johngraves/Documents/20181114/qv/Hinuera Stone Price List-EMAIL.pdf
+/Users/johngraves/Documents/20181114/qv/Humes Price list Draft.xlsx
+/Users/johngraves/Documents/20181114/qv/List of Supplier Links.pdf
+/Users/johngraves/Documents/20181114/qv/Lowery concrete cutting Price Guide 01.10.2015, received 6.3.17.pdf
+/Users/johngraves/Documents/20181114/qv/MPG DecorativeGlass Price List - 1 December 2017.pdf
+/Users/johngraves/Documents/20181114/qv/MPG LowE Price List - 1 December 2017.pdf
+/Users/johngraves/Documents/20181114/qv/MPG WM Residential DGU Price List - 1 December 2017.pdf
+/Users/johngraves/Documents/20181114/qv/Masada supply price list october 2016 .docx
+/Users/johngraves/Documents/20181114/qv/Maxraft Rates p2.pdf
+/Users/johngraves/Documents/20181114/qv/Maxraft Rates.pdf
+/Users/johngraves/Documents/20181114/qv/Metro List Pricing IGU's.pdf
+/Users/johngraves/Documents/20181114/qv/Metro QV Published Price Book.xlsx
+/Users/johngraves/Documents/20181114/qv/Nikau Quote # QU0072.pdf
+/Users/johngraves/Documents/20181114/qv/PSP Flat Sheets Pricelist - TRADE Feb 2018.pdf
+/Users/johngraves/Documents/20181114/qv/PW-Products-for-QV2018Q1.xlsx
+/Users/johngraves/Documents/20181114/qv/Polyrock Pricing.pdf
+/Users/johngraves/Documents/20181114/qv/Price Book (PDF) with Flashing Guide.pdf
+/Users/johngraves/Documents/20181114/qv/QS - 88.9- 2m whole sale to builder 1_8_18.xlsx
+/Users/johngraves/Documents/20181114/qv/QV NZ-Wide Rates - Formance March 2018.pdf
+/Users/johngraves/Documents/20181114/qv/RE Bugalow Villa Rates.msg
+/Users/johngraves/Documents/20181114/qv/RE Form Mail - sika 2.msg
+/Users/johngraves/Documents/20181114/qv/RE Geotextile fabrics.msg
+/Users/johngraves/Documents/20181114/qv/RE Rates.msg
+/Users/johngraves/Documents/20181114/qv/RE Secugrid.msg
+/Users/johngraves/Documents/20181114/qv/RE Unistrut.msg
+/Users/johngraves/Documents/20181114/qv/Rautitan Water and Gas Price List October V2 2015.xlsx
+/Users/johngraves/Documents/20181114/qv/Re Pricing Tree Grates.msg
+/Users/johngraves/Documents/20181114/qv/Resene retailpricelist.pdf
+/Users/johngraves/Documents/20181114/qv/SalesQuotationReport_QT00172984__.pdf
+/Users/johngraves/Documents/20181114/qv/Sika Trade Price List 2018 - Construction.pdf
+/Users/johngraves/Documents/20181114/qv/Speedfloor SC Price List 2018 - 2019.pdf
+/Users/johngraves/Documents/20181114/qv/Speedfloor complete system rates 2018-19.pdf
+/Users/johngraves/Documents/20181114/qv/Subject Easysteel Website Enquiry.msg
+/Users/johngraves/Documents/20181114/qv/Thyssen Website Inquiry.msg
+/Users/johngraves/Documents/20181114/qv/Underfloor Heating Price List Feb 2016.xlsx
+/Users/johngraves/Documents/20181114/qv/Wall and Ceiling Price Guide - April 2018 - web.pdf
+/Users/johngraves/Documents/20181114/qv/Winstone All-Price-Lists.pdf
+/Users/johngraves/Documents/20181114/qv/Woodtex 2018 Use.pdf
+/Users/johngraves/Documents/20181114/qv/X-block compound price.msg
+/Users/johngraves/Documents/20181114/qv/canterbury bricks.pdf
+/Users/johngraves/Documents/20181114/qv/screw piles.jpg
+/Users/johngraves/Documents/20181114/qv/unistrut Clips etc P6 price list.pdf
+/Users/johngraves/Documents/20181114/qv/wetransfer-dd3d75.zip
+
+20181113
+/Users/johngraves/Documents/20181113/qv
+/Users/johngraves/Documents/20181113/qv/.DS_Store
+/Users/johngraves/Documents/20181113/qv/20181113 1423 QV scan_xls.py output.xlsx
+/Users/johngraves/Documents/20181113/qv/QV Cost Builder Sprint Approach.pdf
+/Users/johngraves/Documents/20181113/qv/QV costbuilder information.pdf
+/Users/johngraves/Documents/20181113/qv/scan_xls.py
+# Martin of QV Shares 5 files
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c.zip
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/3Structure_1.xlsx
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/6Services_1.xlsx
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/Elemental1.xlsx
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/MAT_Master 2018Q3.xlsx
+/Users/johngraves/Documents/20181113/qv/wetransfer-0f361c/SUP_MASTER_2018_M8.xlsm

@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+    - echo Logging in to Amazon ECR...
+    - $(aws ecr get-login --no-include-email --region ap-southeast-2)
+  install:
+    commands:
+    - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
+    - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+  build:
+    commands:
+    - cd Build_Graph && docker build -t qvcostbuilder/buildgraph .
+    - docker tag qvcostbuilder/buildgraph:latest 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:latest
+    - docker push 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:latest

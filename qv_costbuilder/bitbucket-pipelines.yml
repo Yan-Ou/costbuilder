@@ -1,0 +1,36 @@
+image: openkbs/jre-mvn-py3
+
+pipelines:
+  branches:
+    '{master,feature/*}':
+    - step:
+        name: Build and Deploy to Staging
+        deployment: staging
+        services:
+          - docker
+        script:
+          - sudo pip3 install awscli
+          - sudo apt-get install -y jq
+          - declare -x VERSION=$(jq -r ".version" package.json)
+          - $(aws ecr get-login --no-include-email --region ap-southeast-2)
+          - cp -rf Build_Graph/config/config_staging.py Build_Graph/config.py
+          - cd Build_Graph && docker build -t qvcostbuilder/buildgraph .
+          - docker tag qvcostbuilder/buildgraph:latest 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:latest
+          - docker push 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:latest
+
+    - step:
+        name: Build and Deploy to Production
+        deployment: production
+        trigger: manual
+        services:
+          - docker
+        script:
+          - sudo pip3 install awscli
+          - sudo apt-get install -y jq
+          - declare -x VERSION=$(jq -r ".version" package.json)
+          - $(aws ecr get-login --no-include-email --region ap-southeast-2)
+          - cd Build_Graph && docker build -t qvcostbuilder/buildgraph .
+          - docker tag qvcostbuilder/buildgraph:latest 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:$VERSION
+          - docker push 008774476532.dkr.ecr.ap-southeast-2.amazonaws.com/qvcostbuilder/buildgraph:$VERSION
+
+
